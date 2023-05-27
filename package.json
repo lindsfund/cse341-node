@@ -1,0 +1,19 @@
+{
+  "name": "cse341-node",
+  "version": "1.0.0",
+  "description": "API for cse341",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lindsfund/cse341-node.git"
+  },
+  "author": "Lindsey Fund",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lindsfund/cse341-node/issues"
+  },
+  "homepage": "https://github.com/lindsfund/cse341-node#readme"
+}
