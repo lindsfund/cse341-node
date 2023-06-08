@@ -1,8 +1,8 @@
 {
-  "name": "cse341-node",
+  "name": "lesson2",
   "version": "1.0.0",
   "description": "API for cse341",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "node app.js",
     "start": "nodemon server.js",
@@ -25,5 +25,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
-  }
+  },
+  "keywords": [
+    "lesson2"
+  ]
 }

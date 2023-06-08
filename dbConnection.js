@@ -5,8 +5,9 @@ dotenv.config();
 async function main() {
     //create a constant for the connection URI
     const dbPassword = encodeURIComponent(process.env.DB_PASSWORD);
-    const uri = `mongodb+srv://${process.env.DB_USERNAME}:${dbPassword}@cluster0.0hvle9u.mongodb.net/`;
-    const client = new MongoClient(uri);
+    const dbUsername = encodeURIComponent(process.env.DB_USERNAME);
+    const URI = `mongodb+srv://${dbUsername}:${dbPassword}@${process.env.DB_CLUSTER}`;
+    const client = new MongoClient(URI);
     
     try{
         //connect to cluster
