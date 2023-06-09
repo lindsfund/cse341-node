@@ -24,6 +24,10 @@ app
     })
     .use('/professional',professionalRoutes);
 
+app.listen(port, () => {
+    console.log("Running")
+})
+/*
 mongodb.initDb((err,mongodb) => {
     if (err) {
         console.log(err);
@@ -31,5 +35,5 @@ mongodb.initDb((err,mongodb) => {
         app.listen(port);
         console.log(`Connected to DB and listening on ${port}`);
     }
-});
+});*/
 
