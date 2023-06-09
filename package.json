@@ -1,5 +1,5 @@
 {
-  "name": "lesson2",
+  "name": "professional",
   "version": "1.0.0",
   "description": "API for cse341",
   "main": "server.js",
@@ -27,6 +27,6 @@
     "nodemon": "^2.0.22"
   },
   "keywords": [
-    "lesson2"
+    "professional"
   ]
 }

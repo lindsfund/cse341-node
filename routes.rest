@@ -1,1 +1,1 @@
-GET http://localhost:8080/lesson2 # the request above returns a json object with all the data. no DB is connected
+GET http://localhost:8080/professional # the request above returns a json object with all the data. no DB is connected

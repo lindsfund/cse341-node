@@ -4,16 +4,16 @@ const bodyParse = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const mongodb = require('./db/connect');
 // const routes = require('./routes');
-const lesson2Routes = require('./routes/lesson2');
+const professionalRoutes = require('./routes/professional');
 
 const app = express();
 const port = process.env.port || 8080;
 
 //week 1
-app.use('/', require('./routes/index'));
+// app.use('/', require('./routes/index'));
 
-app.listen(process.env.port || port);
-console.log(`Web Server is listening at port ${process.env.port || port}`);
+// app.listen(process.env.port || port);
+// console.log(`Web Server is listening at port ${process.env.port || port}`);
 
 //week 2
 app
@@ -22,7 +22,7 @@ app
         res.setHeader('Access-Control-Allow-Origin', '*');
         next();
     })
-    .use('/lesson2',lesson2Routes);
+    .use('/professional',professionalRoutes);
 
 mongodb.initDb((err,mongodb) => {
     if (err) {
