@@ -3,12 +3,19 @@ const express = require('express');
 const bodyParse = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const mongodb = require('./db/connect');
+const routes = require('./personalAssignments/routes'); //use this for the personal assignments
 const professionalRoutes = require('./routes/professional');
 
 const app = express();
+const app2 = express();
 const port = process.env.port || 8080;
+const port2 = process.env.port || 4000; //use this for the personal assignments
 
+//personal assignments
+app2.use('/', require('./personalAssignments/routes/index'));
 
+app2.listen(process.env.port || port2);
+console.log(`Web Server is listening at port ${process.env.port || port2}`);
 
 //week 2
 app
