@@ -1,6 +1,6 @@
 const routes = require('express').Router();
 const lesson1Controller = require('../controllers/lesson1');
-const professionalController = require('../../controllers/professional');
+const professionalController = require('../controllers/professional');
 
 routes.get('/', lesson1Controller.lindseyRoute);
 routes.get('/benjamin', lesson1Controller.benRoute);
