@@ -3,19 +3,26 @@ const express = require('express');
 const bodyParse = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const mongodb = require('./db/connect');
+<<<<<<< HEAD
 const routes = require('./personalAssignments/routes'); //use this for the personal assignments
+=======
+// const routes = require('./routes');
+>>>>>>> parent of d07df8a (insert contacts into mongoDb)
 const professionalRoutes = require('./routes/professional');
 
 const app = express();
-const app2 = express();
 const port = process.env.port || 8080;
-const port2 = process.env.port || 4000; //use this for the personal assignments
 
+<<<<<<< HEAD
 //personal assignments
 app2.use('/', require('./personalAssignments/routes/index'));
+=======
+//week 1
+// app.use('/', require('./routes/index'));
+>>>>>>> parent of d07df8a (insert contacts into mongoDb)
 
-app2.listen(process.env.port || port2);
-console.log(`Web Server is listening at port ${process.env.port || port2}`);
+// app.listen(process.env.port || port);
+// console.log(`Web Server is listening at port ${process.env.port || port}`);
 
 //week 2
 app
