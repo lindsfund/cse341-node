@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-const router = express.Router();
-const routes = require('/routes/lesson1');
+// const router = express.Router();
+// const routes = require('/routes/lesson1');
 
 const port = 4000;
 
