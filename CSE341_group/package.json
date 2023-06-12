@@ -1,7 +1,7 @@
 {
-  "name": "professional",
+  "name": "cse341_group",
   "version": "1.0.0",
-  "description": "API for cse341",
+  "description": "group work for 341",
   "main": "server.js",
   "scripts": {
     "test": "node app.js",
@@ -12,7 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/lindsfund/cse341-node.git"
   },
-  "author": "Lindsey Fund",
+  "keywords": [
+    "professional"
+  ],
+  "author": "Lindsey Fund and Group",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lindsfund/cse341-node/issues"
@@ -25,8 +28,5 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
-  },
-  "keywords": [
-    "professional"
-  ]
+  }
 }

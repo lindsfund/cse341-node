@@ -1,7 +1,7 @@
 {
-  "name": "professional",
+  "name": "cse341_personal",
   "version": "1.0.0",
-  "description": "API for cse341",
+  "description": "personal cse341 assignments",
   "main": "server.js",
   "scripts": {
     "test": "node app.js",
@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/lindsfund/cse341-node.git"
   },
+  "keywords": [
+    "cse341"
+  ],
   "author": "Lindsey Fund",
   "license": "ISC",
   "bugs": {
@@ -25,8 +28,5 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
-  },
-  "keywords": [
-    "professional"
-  ]
+  }
 }
