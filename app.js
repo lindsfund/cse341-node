@@ -1,13 +1,14 @@
 const express = require('express');
+const bodyParser = require ('body-parser');
 const app = express();
-// const router = express.Router();
-// const routes = require('/routes/lesson1');
+//*tutorial link codeforgeek.com/express-nodejs-tutorialnpm
+
 
 const port = 4000;
 
-app.get ('/', (req, res) => {
-    res.send('Hello');
-});
+
+app.use(bodyParser.json());
+app.use('/',require('./routes/index'));
 
 
 app.listen(process.env.PORT || port, () => {
