@@ -4,6 +4,26 @@ const MongoClient = require('mongodb').MongoClient;
 
 let _db;
 
+const username = encodeURIComponent(process.env.DB_USERNAME);
+const password = encodeURIComponent(process.env.DB_PASSWORD);
+const cluster = process.env.DB_CLUSTER;
+
+let URI = `mongodb+srv://${username}:${password}@${cluster}`;
+
+const client = new MongoClient(URI);
+
+// async function run() {
+//     try{
+//         await client.connect();
+
+//         const database = client.db();
+//         console.log(database);
+//     }finally {
+//         await client.close();
+//     }
+// }
+// run().catch(console.dir);
+
 const initDb = (callback) => {
     //check for running connection
     if(_db) {
@@ -11,7 +31,7 @@ const initDb = (callback) => {
         return callback(null, _db);
     }
     //connect to MongoDb
-    MongoClient.connect(process.env.MONGO_URI)
+    MongoClient.connect(URI)
         .then((client) => {
             _db = client;
             callback(null, _db);
