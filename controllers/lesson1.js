@@ -1,7 +1,5 @@
 //This is where logic takes place
 
-
-
 const testRoute = (req, res) => {
     res.send('test');
 }
