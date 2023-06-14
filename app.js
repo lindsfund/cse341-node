@@ -3,11 +3,8 @@ const express = require('express');
 const bodyParser = require ('body-parser');
 const mongodb = require('./db/connect');
 
-
-
 const app = express();
 const port = 4000;
-
 
 app.use(bodyParser.json())
 app.use((req,res,next) => {
