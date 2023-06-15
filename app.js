@@ -6,12 +6,15 @@ const mongodb = require('./db/connect');
 const app = express();
 const port = 4000;
 
-app.use(bodyParser.json())
+//middleware
+app.use(bodyParser.json());
+app.use(express.urlencoded({extended: true}));
 app.use((req,res,next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
 })
 app.use('/',require('./routes/index'));
+
 
 mongodb.initDb((err, mongodb) => {
     if(err) {
