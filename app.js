@@ -7,6 +7,8 @@ const app = express();
 const port = 4000;
 
 //middleware
+app.use(bodyParser.json());
+app.use(express.urlencoded({extended: true}));
 app.use((req,res,next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
@@ -27,12 +29,11 @@ mongodb.initDb((err, mongodb) => {
 //! The DEV ZONE >:D
 
 //middleware
-app.use(bodyParser.json());
-app.use(express.urlencoded({extended: true}));
 
 
-app.get('/contactNew', (req, res) =>{
-    res.send('Contact Added');
 
-})
+// app.get('/contactNew', (req, res) =>{
+//     res.send('Contact Added');
+
+// })
 
