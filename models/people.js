@@ -1,7 +1,7 @@
 //This is where logic takes place
 
-const testRoute = (req, res) => {
-    res.send('test');
+const homeRoute = (req, res) => {
+    res.send('Homepage');
 }
 
 const lindseyRoute = (req, res) => {
@@ -13,7 +13,7 @@ const benjaminRoute = (req, res) => {
 }
 
 module.exports = {
-    testRoute,
+    homeRoute,
     lindseyRoute,
     benjaminRoute,
 }
