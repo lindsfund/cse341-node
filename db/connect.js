@@ -12,18 +12,7 @@ let URI = `mongodb+srv://${username}:${password}@${cluster}`;
 
 const client = new MongoClient(URI);
 
-// async function run() {
-//     try{
-//         await client.connect();
-
-//         const database = client.db();
-//         console.log(database);
-//     }finally {
-//         await client.close();
-//     }
-// }
-// run().catch(console.dir);
-
+//initialize Db connection
 const initDb = (callback) => {
     //check for running connection
     if(_db) {
@@ -42,6 +31,7 @@ const initDb = (callback) => {
         });
 };
 
+//get the DB info
 const getDb = () => {
     if (!_db) {
         throw Error('Db not initialized');
