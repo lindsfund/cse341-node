@@ -24,7 +24,7 @@ mongodb.initDb((err) => {
         console.log(`Web Server is listening on port ${port}`);
         });
     }
-})
+});
 
 //! The DEV ZONE >:D
 

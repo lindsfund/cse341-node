@@ -29,11 +29,11 @@ const getSingle = async (req, res) => {
 
 const addNewContact = async (req, res) => {
     const contact = {
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        email: req.body.email,
-        favColor: req.body.favColor,
-        birthday: req.body.birthday
+        firstName: "lori",
+        lastName: "Judd",
+        email: "ljud@nope.com",
+        favColor: "green",
+        birthday: "05/12/1956"
       };
       const response = await mongodb.getDb().db().collection('contacts').insertOne(contact);
       if (response.acknowledged) {
@@ -65,5 +65,5 @@ module.exports = {
     getAll,
     getSingle,
     addNewContact,
-    updateContact
+    updateContact,
 }
