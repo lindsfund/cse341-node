@@ -1,0 +1,42 @@
+[
+    {
+      "_id": "6485553c22701a828551a80b",
+      "firstName": "Roxi",
+      "lastName": "Fund",
+      "email": "rlfund@nope.com",
+      "favoriteColor": "Orange",
+      "birthday": "10-03-2007"
+    },
+    {
+      "_id": "6485553c22701a828551a809",
+      "firstName": "Benjamin",
+      "lastName": "Fund",
+      "email": "bjfund@nope.com",
+      "favoriteColor": "Yellow",
+      "birthday": "11-23-1981"
+    },
+    {
+      "_id": "6485553c22701a828551a80c",
+      "firstName": "Riley",
+      "lastName": "Fund",
+      "email": "rjfund@nope.com",
+      "favoriteColor": "Magenta",
+      "birthday": "10-07-2014"
+    },
+    {
+      "_id": "6485553c22701a828551a80a",
+      "firstName": "Michael",
+      "lastName": "Fund",
+      "email": "mbfund@nope.com",
+      "favoriteColor": "Blue",
+      "birthday": "02-16-2006"
+    },
+    {
+      "_id": "6485553c22701a828551a808",
+      "firstName": "Lindsey",
+      "lastName": "Fund",
+      "email": "fun20001@byui.edu",
+      "favoriteColor": "Pink",
+      "birthday": "01-09-1982"
+    }
+  ]
