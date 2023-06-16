@@ -5,6 +5,6 @@ const contactsCtrl = require('../models/contacts');
 
 routes.get('/', contactsCtrl.getAll);
 routes.get('/:id',contactsCtrl.getSingle);
-routes.post('/:addNew', contactsCtrl.addNewContact);
+routes.post('/', contactsCtrl.addNewContact);
 
 module.exports = routes;

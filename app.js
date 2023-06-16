@@ -16,7 +16,7 @@ app.use((req,res,next) => {
 app.use('/',require('./routesCtrl/index'));
 
 
-mongodb.initDb((err, mongodb) => {
+mongodb.initDb((err) => {
     if(err) {
         console.log(err);
     } else {

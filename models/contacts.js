@@ -20,11 +20,15 @@ const getSingle = async (req, res, next) => {
 };
 
 const addNewContact = async (req, res, next) => {
-    const email = new ObjectId(req.params.email);
-    const result = await mongodb.getDb().db().collection('contacts').insertOne({ _email: email });
-    console.log(result);
-    //const result = await mongodb.getDb().db().collection('contacts').insertOne(documentObject);
+    const contact = {firstName: req.body.firstName};
+    const response = await mongodb.getDb().db().collection('contacts').insertOne(contact);
+    if(response.acknowledged){
+        res.status(201).json(response);
+    } else {
+        res.status(500).json(response.error || 'An error occured while adding your contact.')
+    }
    
+    
 
 }
 
