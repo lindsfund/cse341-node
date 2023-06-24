@@ -51,6 +51,7 @@ const addNewContact = async (req, res) => {
       const response = await mongodb.getDb().db().collection('contacts').insertOne(contact);
       if (response.acknowledged) {
         res.status(201).json(response);
+        res.send(response._id);
       } else {
         res.status(500).json(response.error || 'Some error occurred while creating the contact.');
       }
@@ -74,11 +75,28 @@ const updateContact = async (req, res) => {
     }
 }
 
+const deleteContact = async (req, res) => {
+  const contact = {
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      favColor: req.body.favColor,
+      birthday: req.body.birthday
+    };
+    const response = await mongodb.getDb().db().collection('contacts').deleteOne(contact);
+    if (response.acknowledged) {
+      res.status(201).json(response);
+    } else {
+      res.status(500).json(response.error || 'Some error occurred while creating the contact.');
+    }
+};
+
 module.exports = {
     getAll,
     getSingle,
     addNewContact,
     updateContact,
+    deleteContact,
     contactSchema,
     contactModel,
 
