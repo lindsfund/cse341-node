@@ -16,7 +16,7 @@ app.use((req,res,next) => {
 app.use('/',require('./routesCtrl/index'));
 
 
-mongodb.initDb((err, mongodb) => {
+mongodb.initDb((err) => {
     if(err) {
         console.log(err);
     } else {
@@ -24,6 +24,16 @@ mongodb.initDb((err, mongodb) => {
         console.log(`Web Server is listening on port ${port}`);
         });
     }
-})
+});
 
+//! The DEV ZONE >:D
+
+//middleware
+
+
+
+// app.get('/contactNew', (req, res) =>{
+//     res.send('Contact Added');
+
+// })
 

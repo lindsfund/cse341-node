@@ -3,7 +3,11 @@ const routes = express.Router();
 
 const contactsCtrl = require('../models/contacts');
 
-routes.get('/', contactsCtrl.getAll);
+//get contact info
+routes.get('/get', contactsCtrl.getAll);
 routes.get('/:id',contactsCtrl.getSingle);
+
+//create new contact
+routes.post('/', contactsCtrl.addNewContact);
 
 module.exports = routes;

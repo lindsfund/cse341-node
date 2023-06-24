@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Add new contact</h1>
+        <form action="http://localhost:4000/new" method = "POST">
+            <div class = "formGroup">
+                <label for="firstName">First Name: </label>
+                <input type="text" name = "firstName" id = "firstName">
+
+                <label for="lastName">Last Name: </label>
+                <input type="text" name="lastName" id="lastName">
+
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email">
+
+                <label for="favColor">Favorite Color: </label>
+                <input type="text" name="favColor" id="favColor">
+
+                <label for="birthDay">Birthday: </label>
+                <input type="text" name="birthDay" id="birthDay">
+
+                <button type="submit" class="btn">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
