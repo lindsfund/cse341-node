@@ -5,7 +5,7 @@
     "title": "Contact REST API",
     "description": "Contact list"
   },
-  "host": "linfundcse341.onrender.com/contacts",
+  "host": "linfundcse341.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -197,6 +197,16 @@
           },
           "500": {
             "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/apiDocs/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }

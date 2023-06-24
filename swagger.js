@@ -7,7 +7,7 @@ const doc = {
         title: 'Contact REST API',        // by default: 'REST API'
         description: 'Contact list',  // by default: ''
       },
-      host:'linfundcse341.onrender.com/',
+      host:'linfundcse341.onrender.com',
       schemes: ['https'] 
     };
 
